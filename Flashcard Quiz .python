@@ -1,0 +1,28 @@
+def flashcard_quiz():
+    # List of flashcards with questions and answers
+    flashcards = {
+        "What is the capital of France?": "Paris",
+        "What is 2 + 2?": "4",
+        "Who wrote 'Romeo and Juliet'?": "Shakespeare",
+        "What is the largest planet in our solar system?": "Jupiter",
+        "What is the chemical symbol for water?": "H2O"
+    }
+
+    score = 0
+
+    print("Welcome to the Flashcard Quiz App!")
+    print("Type your answer and press Enter.")
+
+    for question, answer in flashcards.items():
+        user_answer = input(f"\n{question} ")
+        if user_answer.strip().lower() == answer.lower():
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Incorrect! The correct answer is '{answer}'.")
+
+    print(f"\nYour final score: {score}/{len(flashcards)}")
+    print("Thanks for playing!")
+
+if __name__ == "__main__":
+    flashcard_quiz()
